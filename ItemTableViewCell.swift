@@ -10,7 +10,8 @@ import UIKit
 
 class ItemTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var itemImage: UIView!
+    
+    @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var itemNumber: UILabel!
     @IBOutlet weak var itemCounter: UIStepper!
@@ -26,5 +27,10 @@ class ItemTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func itemCounterClicked(_ sender: UIStepper) {
+        itemNumber.text = String(sender.value)
+    }
+    
     
 }

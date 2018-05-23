@@ -36,13 +36,16 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         categoryTableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCategoryCell")
         itemTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomItemCell")
         
-        downloadBakeryImages()
-        
         // Location Service setup
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.categoryTableView.reloadData()
+        self.itemTableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,14 +80,16 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if tableView == categoryTableView {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCategoryCell", for: indexPath) as! CategoryTableViewCell
-            cell.categoryLabel.text = "category one"
-            //cell.categoryImage.image = UIImage(data: <#T##Data#>)
+            cell.categoryLabel.text = "category \(indexPath.row)"
+            cell.categoryImage.image = UIImage(named: "Icon-60")
             return cell
             
         }else{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomItemCell", for: indexPath) as! ItemTableViewCell
-            cell.itemLabel.text = "item one"
+            cell.itemLabel.text = "item \(indexPath.row)"
+            cell.itemNumber.text = String(cell.itemCounter.value)
+            cell.itemImage.image = downloadBakeryImage(rowIndex: indexPath.row)
             return cell
             
         }
@@ -114,22 +119,41 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Download images from Firebase Storage
     //before doing anything, make sure have reference of Firebase storage reference in ViewDidLoad
-    func downloadImage() -> Void {
+    func downloadBakeryImage(rowIndex : Int) -> UIImage {
         
-        print("function called")
+        var tempDataContainer = UIImage()
         let storage = Storage.storage()
-        let itemImagesStorageRef:StorageReference = storage.reference(withPath: "items/bakery/baguette.png")
         
-        var imageArray = [UIImage]()
-        var test = itemImagesStorageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
-            if error == nil {
-                print("type of downloaded data ")
-                print(type(of: data!))
-            }else{
-                print("error message: ")
-                print (error!.localizedDescription)
+        switch rowIndex {
+        case 0:
+            let imageStorageRef = storage.reference(withPath: "/items/bakery/baguette.png")
+            imageStorageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+                if error == nil {
+                    print("Image downloaded")
+                    tempDataContainer = UIImage(data: data!)!
+                }
             }
+        case 1:
+            let imageStorageRef = storage.reference(withPath: "/items/bakery/cheesecake.png")
+            imageStorageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+                if error == nil {
+                    print("Image downloaded")
+                    tempDataContainer = UIImage(data: data!)!
+                }
+            }
+        case 2:
+            let imageStorageRef = storage.reference(withPath: "/items/bakery/cheesecake.png")
+            imageStorageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+                if error == nil {
+                    print("Image downloaded")
+                    tempDataContainer = UIImage(data: data!)!
+                }
+            }
+        default:
+            break
         }
+        
+        return tempDataContainer
     }
     
     
