@@ -13,6 +13,9 @@
 		6315E7E120C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
 		6315E7E220C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
 		6315E7E320C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
+		637692AE20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
+		637692AF20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
+		637692B020CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
 		639A686B20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
 		639A686C20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
 		639A686D20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
@@ -80,6 +83,7 @@
 		3342F35D3D803555F4A73B27 /* Pods_GroceryDeliveryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryDeliveryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F117343DD34E0859701F5BB /* Pods-GroceryDeliveryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryDeliveryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroceryDeliveryAppUITests/Pods-GroceryDeliveryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6315E7E020C905C00086E8B2 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
 		639A686A20BFD5640031454A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63A1EB2B20C116E9009F5778 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		63A1EB2F20C129DD009F5778 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 				639A686A20BFD5640031454A /* WelcomeViewController.swift */,
 				63A1EB2B20C116E9009F5778 /* AccountViewController.swift */,
 				6315E7E020C905C00086E8B2 /* ItemViewController.swift */,
+				637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				63DCBBAE20BEA1920032E8B2 /* SampleDataSource.swift in Sources */,
 				63FA42E620A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63BC6ADB20A6BABF00EB82A6 /* AppDelegate.swift in Sources */,
+				637692AE20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */,
 				63BC6B1320A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,
 				63B9FFDF20C551950050A21F /* User.swift in Sources */,
 				63FA42F320A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
@@ -547,6 +553,7 @@
 				63FA42E720A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63A1EB2D20C116E9009F5778 /* AccountViewController.swift in Sources */,
 				63BC6B1820A6C58000EB82A6 /* LoginViewController.swift in Sources */,
+				637692AF20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */,
 				63BC6AF320A6BAC000EB82A6 /* GroceryDeliveryAppTests.swift in Sources */,
 				63FA42F420A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
 				63BC6B1420A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,
@@ -563,6 +570,7 @@
 				63FA42E820A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63A1EB2E20C116E9009F5778 /* AccountViewController.swift in Sources */,
 				63BC6B1920A6C58000EB82A6 /* LoginViewController.swift in Sources */,
+				637692B020CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */,
 				63BC6AFE20A6BAC100EB82A6 /* GroceryDeliveryAppUITests.swift in Sources */,
 				63FA42F520A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
 				63BC6B1520A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,

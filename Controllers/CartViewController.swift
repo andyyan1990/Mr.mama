@@ -78,7 +78,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBAction func continueBtnClicked(_ sender: Any) {
-        
+        if appDelegate.Order.count > 0 {
+            performSegue(withIdentifier: "confirmOrderSegue", sender: nil)
+        }
     }
     
 }
