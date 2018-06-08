@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="3558" y="-568"/>
         </scene>
-        <!--View Controller-->
+        <!--Location-->
         <scene sceneID="LdM-Ms-avi">
             <objects>
-                <viewController id="96I-Zi-Asp" sceneMemberID="viewController">
+                <viewController title="Location" id="96I-Zi-Asp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nb-IV-jhN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCi-WU-ITd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4724" y="-567.48768472906409"/>
+            <point key="canvasLocation" x="6146" y="151"/>
         </scene>
         <!--Account-->
         <scene sceneID="L7O-At-K7N">
@@ -528,8 +528,26 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-EE-5Wt">
                                         <rect key="frame" x="0.0" y="372.5" width="375" height="186.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y58-bz-TuV">
+                                                <rect key="frame" x="50" y="140" width="274" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Pick-up"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-ZJ-rdt">
+                                                <rect key="frame" x="50" y="47" width="274" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Delivery"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-y8-8Bl">
+                                        <rect key="frame" x="0.0" y="559" width="375" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5ca-3c-QMD" secondAttribute="trailing" id="9B4-bf-89O"/>
@@ -546,7 +564,15 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zU-aD-MRX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="dtX-PQ-Vnu"/>
+                                    <barButtonItem title="Total Price" id="vp5-wA-13D"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7dr-Fs-75K"/>
+                                    <barButtonItem style="plain" id="Udt-wS-Hn7">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iIH-yH-eBQ">
+                                            <rect key="frame" x="310" y="7" width="49" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Submit"/>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
