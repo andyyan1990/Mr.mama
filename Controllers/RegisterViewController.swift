@@ -47,7 +47,19 @@ class RegisterViewController: UIViewController {
                     user?.sendEmailVerification(completion: { (error) in
                         print(error ?? "default error")
                     })
-                    self.performSegue(withIdentifier: "registerToMain", sender: sender)
+                    
+                    //persist user information into database
+                    let dbRf = Database.database().reference(fromURL: "https://mr-mama-5bdee.firebaseio.com").child("User").child((user?.uid)!)
+    
+                    let values = ["email" : self.emailField.text!, "name" : "default user"] as [String : Any]
+                    dbRf.updateChildValues(values, withCompletionBlock: { (error, dbRf) in
+                        if error == nil{
+                            print("user saved")
+                        }else{
+                            print(error!.localizedDescription)
+                        }
+                    })
+                    self.performSegue(withIdentifier: "registerToLogin", sender: sender)
                 }else{
                     self.alertMessage(title: "Signup Error", message: error!.localizedDescription)
                 }

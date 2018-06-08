@@ -14,19 +14,22 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var Order : [OrderItem] = []
+    var isLogin : Bool = false
+    var currentUserUid:String = ""
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        //Initialise Firebase Database Referenece
-        let myDatabase = Database.database().reference()
-        myDatabase.setValue("my Database")
-        
-        //Initialise Firebase Storage
-        let myStorage = Storage.storage()
-    
+        if let uid = Auth.auth().currentUser?.uid {
+            isLogin = true
+            currentUserUid = uid
+        }else{
+            print("no user login")
+        }
+  
         return true
     }
 

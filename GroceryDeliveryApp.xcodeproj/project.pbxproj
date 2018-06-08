@@ -10,7 +10,18 @@
 		0B485F32951D9EFBC792EAC7 /* Pods_GroceryDeliveryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169A81E45A5D0809EF611AD8 /* Pods_GroceryDeliveryApp.framework */; };
 		10013F2DB5ED2896D0F74962 /* Pods_GroceryDeliveryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1E8BA531BCCB32CC6170C /* Pods_GroceryDeliveryAppTests.framework */; };
 		57D39B2CED8C1232AA818EC4 /* Pods_GroceryDeliveryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3342F35D3D803555F4A73B27 /* Pods_GroceryDeliveryAppUITests.framework */; };
-		63AE437720AD59F200F8B67A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63AE437620AD59F200F8B67A /* Default-568h@2x.png */; };
+		6315E7E120C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
+		6315E7E220C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
+		6315E7E320C905C00086E8B2 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E7E020C905C00086E8B2 /* ItemViewController.swift */; };
+		639A686B20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
+		639A686C20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
+		639A686D20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
+		63A1EB2C20C116E9009F5778 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1EB2B20C116E9009F5778 /* AccountViewController.swift */; };
+		63A1EB2D20C116E9009F5778 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1EB2B20C116E9009F5778 /* AccountViewController.swift */; };
+		63A1EB2E20C116E9009F5778 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1EB2B20C116E9009F5778 /* AccountViewController.swift */; };
+		63A1EB3020C129DD009F5778 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1EB2F20C129DD009F5778 /* Category.swift */; };
+		63A3F53D20B672F900C22562 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3F53C20B672F900C22562 /* TabController.swift */; };
+		63B9FFDF20C551950050A21F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9FFDE20C551950050A21F /* User.swift */; };
 		63BC6ADB20A6BABF00EB82A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC6ADA20A6BABF00EB82A6 /* AppDelegate.swift */; };
 		63BC6AE020A6BABF00EB82A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BC6ADE20A6BABF00EB82A6 /* Main.storyboard */; };
 		63BC6AE320A6BABF00EB82A6 /* GroceryDeliveryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63BC6AE120A6BABF00EB82A6 /* GroceryDeliveryApp.xcdatamodeld */; };
@@ -26,6 +37,9 @@
 		63BC6B1720A6C58000EB82A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */; };
 		63BC6B1820A6C58000EB82A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */; };
 		63BC6B1920A6C58000EB82A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */; };
+		63DCBBAE20BEA1920032E8B2 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DCBBAD20BEA1920032E8B2 /* SampleDataSource.swift */; };
+		63E8B44D20B6972D0078F69E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8B44C20B6972D0078F69E /* CartViewController.swift */; };
+		63E8B44F20B6BF8B0078F69E /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8B44E20B6BF8B0078F69E /* OrderItem.swift */; };
 		63FA42E620A7FE0900B4AC46 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */; };
 		63FA42E720A7FE0900B4AC46 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */; };
 		63FA42E820A7FE0900B4AC46 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */; };
@@ -65,7 +79,12 @@
 		19961935C0FCE68409A487E7 /* Pods-GroceryDeliveryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryDeliveryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroceryDeliveryApp/Pods-GroceryDeliveryApp.release.xcconfig"; sourceTree = "<group>"; };
 		3342F35D3D803555F4A73B27 /* Pods_GroceryDeliveryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryDeliveryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F117343DD34E0859701F5BB /* Pods-GroceryDeliveryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryDeliveryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroceryDeliveryAppUITests/Pods-GroceryDeliveryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		63AE437620AD59F200F8B67A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6315E7E020C905C00086E8B2 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		639A686A20BFD5640031454A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		63A1EB2B20C116E9009F5778 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		63A1EB2F20C129DD009F5778 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		63A3F53C20B672F900C22562 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		63B9FFDE20C551950050A21F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		63BC6AD720A6BABF00EB82A6 /* GroceryDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BC6ADA20A6BABF00EB82A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BC6ADF20A6BABF00EB82A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +102,9 @@
 		63BC6B0E20A6C16B00EB82A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63BC6B1220A6C55D00EB82A6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		63DCBBAD20BEA1920032E8B2 /* SampleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
+		63E8B44C20B6972D0078F69E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		63E8B44E20B6BF8B0078F69E /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		63FA42E920A7FE3600B4AC46 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		63FA42EA20A7FE3600B4AC46 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,18 +159,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6343FD4C20BD5F3E00DDF3AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63E8B44E20B6BF8B0078F69E /* OrderItem.swift */,
+				63DCBBAD20BEA1920032E8B2 /* SampleDataSource.swift */,
+				63A1EB2F20C129DD009F5778 /* Category.swift */,
+				63B9FFDE20C551950050A21F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		63BC6ACE20A6BABF00EB82A6 = {
 			isa = PBXGroup;
 			children = (
-				63AE437620AD59F200F8B67A /* Default-568h@2x.png */,
-				63FA42F120A7FE4C00B4AC46 /* ItemTableViewCell.swift */,
-				63FA42F220A7FE4C00B4AC46 /* ItemTableViewCell.xib */,
-				63FA42E920A7FE3600B4AC46 /* CategoryTableViewCell.swift */,
-				63FA42EA20A7FE3600B4AC46 /* CategoryTableViewCell.xib */,
-				63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */,
-				63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */,
-				63BC6B1220A6C55D00EB82A6 /* RegisterViewController.swift */,
+				6343FD4C20BD5F3E00DDF3AB /* Model */,
+				63E8B44B20B6911C0078F69E /* Controllers */,
 				63BC6AD920A6BABF00EB82A6 /* GroceryDeliveryApp */,
+				63E8B44A20B690EB0078F69E /* Custom Cells */,
 				63BC6AF120A6BAC000EB82A6 /* GroceryDeliveryAppTests */,
 				63BC6AFC20A6BAC100EB82A6 /* GroceryDeliveryAppUITests */,
 				63BC6AD820A6BABF00EB82A6 /* Products */,
@@ -208,6 +236,32 @@
 				3342F35D3D803555F4A73B27 /* Pods_GroceryDeliveryAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E8B44A20B690EB0078F69E /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63FA42F120A7FE4C00B4AC46 /* ItemTableViewCell.swift */,
+				63FA42F220A7FE4C00B4AC46 /* ItemTableViewCell.xib */,
+				63FA42E920A7FE3600B4AC46 /* CategoryTableViewCell.swift */,
+				63FA42EA20A7FE3600B4AC46 /* CategoryTableViewCell.xib */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		63E8B44B20B6911C0078F69E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63BC6B1220A6C55D00EB82A6 /* RegisterViewController.swift */,
+				63BC6B1620A6C58000EB82A6 /* LoginViewController.swift */,
+				63A3F53C20B672F900C22562 /* TabController.swift */,
+				63FA42E520A7FE0900B4AC46 /* ShopViewController.swift */,
+				63E8B44C20B6972D0078F69E /* CartViewController.swift */,
+				639A686A20BFD5640031454A /* WelcomeViewController.swift */,
+				63A1EB2B20C116E9009F5778 /* AccountViewController.swift */,
+				6315E7E020C905C00086E8B2 /* ItemViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +378,6 @@
 				63BC6B0F20A6C16C00EB82A6 /* GoogleService-Info.plist in Resources */,
 				63BC6AE520A6BAC000EB82A6 /* Assets.xcassets in Resources */,
 				63FA42F620A7FE4C00B4AC46 /* ItemTableViewCell.xib in Resources */,
-				63AE437720AD59F200F8B67A /* Default-568h@2x.png in Resources */,
 				63BC6AE020A6BABF00EB82A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +490,7 @@
 				"${PODS_ROOT}/GLMap+DynamicLib/GLMap.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -448,6 +502,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLMap.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -466,12 +521,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				63BC6B1720A6C58000EB82A6 /* LoginViewController.swift in Sources */,
+				6315E7E120C905C00086E8B2 /* ItemViewController.swift in Sources */,
+				63A3F53D20B672F900C22562 /* TabController.swift in Sources */,
+				63A1EB2C20C116E9009F5778 /* AccountViewController.swift in Sources */,
 				63BC6AE320A6BABF00EB82A6 /* GroceryDeliveryApp.xcdatamodeld in Sources */,
+				63DCBBAE20BEA1920032E8B2 /* SampleDataSource.swift in Sources */,
 				63FA42E620A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63BC6ADB20A6BABF00EB82A6 /* AppDelegate.swift in Sources */,
 				63BC6B1320A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,
+				63B9FFDF20C551950050A21F /* User.swift in Sources */,
 				63FA42F320A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
+				63E8B44F20B6BF8B0078F69E /* OrderItem.swift in Sources */,
+				639A686B20BFD5640031454A /* WelcomeViewController.swift in Sources */,
+				63E8B44D20B6972D0078F69E /* CartViewController.swift in Sources */,
 				63FA42EB20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
+				63A1EB3020C129DD009F5778 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,10 +545,13 @@
 			files = (
 				63FA42EC20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
 				63FA42E720A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
+				63A1EB2D20C116E9009F5778 /* AccountViewController.swift in Sources */,
 				63BC6B1820A6C58000EB82A6 /* LoginViewController.swift in Sources */,
 				63BC6AF320A6BAC000EB82A6 /* GroceryDeliveryAppTests.swift in Sources */,
 				63FA42F420A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
 				63BC6B1420A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,
+				639A686C20BFD5640031454A /* WelcomeViewController.swift in Sources */,
+				6315E7E220C905C00086E8B2 /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +561,13 @@
 			files = (
 				63FA42ED20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
 				63FA42E820A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
+				63A1EB2E20C116E9009F5778 /* AccountViewController.swift in Sources */,
 				63BC6B1920A6C58000EB82A6 /* LoginViewController.swift in Sources */,
 				63BC6AFE20A6BAC100EB82A6 /* GroceryDeliveryAppUITests.swift in Sources */,
 				63FA42F520A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
 				63BC6B1520A6C55D00EB82A6 /* RegisterViewController.swift in Sources */,
+				639A686D20BFD5640031454A /* WelcomeViewController.swift in Sources */,
+				6315E7E320C905C00086E8B2 /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ pod 'SVProgressHUD'
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'GLMap'
+pod 'SDWebImage', '~> 4.0'
 
   target 'GroceryDeliveryAppTests' do
     inherit! :search_paths

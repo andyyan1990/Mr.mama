@@ -3,11 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>GroceryDeliveryApp.xcscheme</key>
+		<key>63BC6AD620A6BABF00EB82A6</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63BC6AED20A6BAC000EB82A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63BC6AF820A6BAC100EB82A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
