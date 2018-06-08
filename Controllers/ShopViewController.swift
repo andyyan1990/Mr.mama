@@ -11,7 +11,7 @@ import Firebase
 import CoreLocation
 import SDWebImage
 
-class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate{
+class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var itemTableView: UITableView!
@@ -48,11 +48,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         fetchCategoryList()
         fetchItemList()
         
-        // Location Service setup
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -192,21 +187,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
             }
         }
-        
-        
-//        Database.database().reference().child("Stock").observe(DataEventType.value) { (snapshot) in
-//            if let categoryDict = snapshot.value as? [String : Any] {
-//                for key in categoryDict.keys {
-//                    let cat = Category()
-//                    cat.categoryName = key
-//                    self.categoryList.append(cat)
-//                }
-//                DispatchQueue.main.async {
-//                    self.categoryTableView.reloadData()
-//                }
-//
-//            }
-//        }
     }
     
     func fetchItemList() {
@@ -219,32 +199,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Download images from Firebase Storage
     //before doing anything, make sure have reference of Firebase storage reference in ViewDidLoad
-
-    
-    
-    
-    // MARK: - Location Manager Delegate Methods
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[locations.count - 1]
-        if location.horizontalAccuracy > 0 {
-            
-            locationManager.stopUpdatingLocation()
-//            for simulator, can set customised location data in the debug menu
-            let lat = location.coordinate.latitude
-            let lon = location.coordinate.longitude
-            let params : [String : String] = ["lat" : String(lat), "lon" : String(lon)]
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-        let alert = UIAlertController(title: "Location Undefined", message: "this is a location alert", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
-        
-    }
     
 
 }

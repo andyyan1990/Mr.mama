@@ -16,6 +16,9 @@
 		637692AE20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
 		637692AF20CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
 		637692B020CA1D69008C0060 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */; };
+		637692B220CA561E008C0060 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692B120CA561E008C0060 /* MapViewController.swift */; };
+		637692B320CA561E008C0060 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692B120CA561E008C0060 /* MapViewController.swift */; };
+		637692B420CA561E008C0060 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637692B120CA561E008C0060 /* MapViewController.swift */; };
 		639A686B20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
 		639A686C20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
 		639A686D20BFD5640031454A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A686A20BFD5640031454A /* WelcomeViewController.swift */; };
@@ -84,6 +87,7 @@
 		3F117343DD34E0859701F5BB /* Pods-GroceryDeliveryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryDeliveryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroceryDeliveryAppUITests/Pods-GroceryDeliveryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6315E7E020C905C00086E8B2 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
+		637692B120CA561E008C0060 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		639A686A20BFD5640031454A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63A1EB2B20C116E9009F5778 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		63A1EB2F20C129DD009F5778 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				63A1EB2B20C116E9009F5778 /* AccountViewController.swift */,
 				6315E7E020C905C00086E8B2 /* ItemViewController.swift */,
 				637692AD20CA1D69008C0060 /* ConfirmOrderViewController.swift */,
+				637692B120CA561E008C0060 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -454,12 +459,14 @@
 				"${PODS_ROOT}/GLMap+DefaultStyle/DefaultStyle.bundle",
 				"${PODS_ROOT}/GLMap+DefaultStyle/fonts",
 				"${PODS_ROOT}/GLMap+WorldMap/world.vm",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DefaultStyle.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fonts",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/world.vm",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -538,6 +545,7 @@
 				63B9FFDF20C551950050A21F /* User.swift in Sources */,
 				63FA42F320A7FE4C00B4AC46 /* ItemTableViewCell.swift in Sources */,
 				63E8B44F20B6BF8B0078F69E /* OrderItem.swift in Sources */,
+				637692B220CA561E008C0060 /* MapViewController.swift in Sources */,
 				639A686B20BFD5640031454A /* WelcomeViewController.swift in Sources */,
 				63E8B44D20B6972D0078F69E /* CartViewController.swift in Sources */,
 				63FA42EB20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
@@ -549,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637692B320CA561E008C0060 /* MapViewController.swift in Sources */,
 				63FA42EC20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
 				63FA42E720A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63A1EB2D20C116E9009F5778 /* AccountViewController.swift in Sources */,
@@ -566,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637692B420CA561E008C0060 /* MapViewController.swift in Sources */,
 				63FA42ED20A7FE3600B4AC46 /* CategoryTableViewCell.swift in Sources */,
 				63FA42E820A7FE0900B4AC46 /* ShopViewController.swift in Sources */,
 				63A1EB2E20C116E9009F5778 /* AccountViewController.swift in Sources */,
@@ -737,10 +747,7 @@
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -757,10 +764,7 @@
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -777,11 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,11 +799,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -820,11 +816,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -841,11 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7853BYDVL;
 				INFOPLIST_FILE = GroceryDeliveryAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andy-Yan.GroceryDeliveryAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

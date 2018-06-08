@@ -24,6 +24,7 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         // Do any additional setup after loading the view.
         fetchUser()
+        profileImageView.layer.cornerRadius = profileImageView.frame.width/2
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectprofileImageView)) )
         

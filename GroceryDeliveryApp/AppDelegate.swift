@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             print("no user login")
         }
+        
+        //setup GoogleMap
+        GMSServices.provideAPIKey("AIzaSyAZpaHYi6y89i20DMqp8SO38T0NjoXpUS8")
   
         return true
     }

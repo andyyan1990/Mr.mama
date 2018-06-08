@@ -45,6 +45,7 @@ class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITable
         let orderItem = appDelegate.Order[indexPath.row]
         cell.textLabel?.text = orderItem.itemName
         cell.detailTextLabel?.text = "Qtn: \(orderItem.quantity) Price: \(Double(orderItem.quantity) * Double(orderItem.itemPrice)!)"
+        cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.width)!
         cell.imageView?.image = orderItem.itemImage
         totalPrice = totalPrice! + Double(orderItem.quantity) * Double(orderItem.itemPrice)!
         return cell
