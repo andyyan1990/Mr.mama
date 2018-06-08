@@ -237,7 +237,7 @@
                                     <constraint firstAttribute="height" constant="55" id="XoM-ke-rgR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Set Address">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -254,16 +254,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTR-vR-cBW">
                                 <rect key="frame" x="18" y="35" width="339" height="70"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-K5-ltM">
-                                        <rect key="frame" x="10" y="20" width="272" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-K5-ltM">
+                                        <rect key="frame" x="10" y="20" width="280" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yon-WD-wxP">
-                                        <rect key="frame" x="293" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yon-WD-wxP">
+                                        <rect key="frame" x="299" y="20" width="30" height="30"/>
                                         <state key="normal" image="search"/>
                                         <connections>
                                             <action selector="searchLocation:" destination="96I-Zi-Asp" eventType="touchUpInside" id="oQE-Fh-FN4"/>
@@ -272,7 +270,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Yon-WD-wxP" secondAttribute="bottom" constant="20" id="9FO-Ws-cXR"/>
+                                    <constraint firstItem="RC6-K5-ltM" firstAttribute="leading" secondItem="fTR-vR-cBW" secondAttribute="leading" constant="10" id="Erd-EU-gY0"/>
                                     <constraint firstAttribute="height" constant="70" id="OIO-8R-ocG"/>
+                                    <constraint firstItem="RC6-K5-ltM" firstAttribute="width" secondItem="fTR-vR-cBW" secondAttribute="width" multiplier="0.7" id="XjB-1N-AMO"/>
+                                    <constraint firstItem="Yon-WD-wxP" firstAttribute="top" secondItem="fTR-vR-cBW" secondAttribute="top" constant="20" id="ev4-xf-MoE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yon-WD-wxP" secondAttribute="trailing" constant="10" id="mk9-ic-2Aq"/>
+                                    <constraint firstItem="RC6-K5-ltM" firstAttribute="top" secondItem="fTR-vR-cBW" secondAttribute="top" constant="20" id="ryI-dB-49I"/>
+                                    <constraint firstAttribute="bottom" secondItem="RC6-K5-ltM" secondAttribute="bottom" constant="20" id="y09-mP-s7E"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -597,21 +602,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-EE-5Wt">
                                         <rect key="frame" x="0.0" y="372.5" width="375" height="186.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y58-bz-TuV">
-                                                <rect key="frame" x="50" y="140" width="274" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Pick-up"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-ZJ-rdt">
-                                                <rect key="frame" x="50" y="47" width="274" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Delivery"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-ZJ-rdt">
+                                                <rect key="frame" x="78.5" y="69" width="217" height="48"/>
+                                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Delivery Address">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="96I-Zi-Asp" kind="presentation" identifier="toMapView" id="xCj-nH-eBg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2mB-ZJ-rdt" firstAttribute="centerX" secondItem="zOL-EE-5Wt" secondAttribute="centerX" id="DhV-gr-o9h"/>
+                                            <constraint firstItem="2mB-ZJ-rdt" firstAttribute="centerY" secondItem="zOL-EE-5Wt" secondAttribute="centerY" id="zvj-e4-Z6D"/>
+                                        </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-y8-8Bl">
                                         <rect key="frame" x="0.0" y="559" width="375" height="0.0"/>
@@ -643,6 +650,9 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Submit"/>
                                         </button>
+                                        <connections>
+                                            <action selector="submitOrder:" destination="dVs-8V-b7w" id="jb6-4G-LOb"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -662,6 +672,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5fj-eb-5yB"/>
                     </view>
+                    <connections>
+                        <outlet property="deliveryAddrBtn" destination="2mB-ZJ-rdt" id="UsT-dl-6PY"/>
+                        <outlet property="totalPriceLabel" destination="vp5-wA-13D" id="ThU-Fa-3Ob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5C-Bi-I7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

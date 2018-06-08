@@ -113,46 +113,6 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright © Evgen Bodunov</string>
-			<key>License</key>
-			<string>Commercial</string>
-			<key>Title</key>
-			<string>GLMap</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright © Evgen Bodunov</string>
-			<key>License</key>
-			<string>Commercial</string>
-			<key>Title</key>
-			<string>GLMap+DefaultStyle</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright © Evgen Bodunov</string>
-			<key>License</key>
-			<string>Commercial</string>
-			<key>Title</key>
-			<string>GLMap+DynamicLib</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright © Evgen Bodunov</string>
-			<key>License</key>
-			<string>Commercial</string>
-			<key>Title</key>
-			<string>GLMap+WorldMap</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>
                                  Apache License
                            Version 2.0, January 2004
@@ -360,16 +320,6 @@ THE SOFTWARE.
 			<string>Apache</string>
 			<key>Title</key>
 			<string>GTMSessionFetcher</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright 2018 Google</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>GoogleMaps</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

@@ -52,22 +52,6 @@ Copyright 2018 Google
 
 Copyright 2018 Google
 
-## GLMap
-
-Copyright © Evgen Bodunov
-
-## GLMap+DefaultStyle
-
-Copyright © Evgen Bodunov
-
-## GLMap+DynamicLib
-
-Copyright © Evgen Bodunov
-
-## GLMap+WorldMap
-
-Copyright © Evgen Bodunov
-
 ## GTMSessionFetcher
 
 
@@ -273,10 +257,6 @@ Copyright © Evgen Bodunov
    See the License for the specific language governing permissions and
    limitations under the License.
 
-
-## GoogleMaps
-
-Copyright 2018 Google
 
 ## GoogleToolboxForMac
 

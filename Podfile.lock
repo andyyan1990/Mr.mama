@@ -33,18 +33,6 @@ PODS:
     - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GLMap (0.9.7):
-    - "GLMap+DefaultStyle"
-    - "GLMap+DynamicLib (= 0.9.7)"
-    - "GLMap+WorldMap"
-  - "GLMap+DefaultStyle (1.0.1)"
-  - "GLMap+DynamicLib (0.9.7)"
-  - "GLMap+WorldMap (18.01)"
-  - GoogleMaps (2.7.0):
-    - GoogleMaps/Maps (= 2.7.0)
-  - GoogleMaps/Base (2.7.0)
-  - GoogleMaps/Maps (2.7.0):
-    - GoogleMaps/Base
   - GoogleToolboxForMac/DebugUtils (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GoogleToolboxForMac/Defines (2.1.4)
@@ -74,8 +62,6 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
-  - GLMap
-  - GoogleMaps
   - SDWebImage (~> 4.0)
   - SVProgressHUD
   - SwiftyJSON
@@ -90,11 +76,6 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseInstanceID
     - FirebaseStorage
-    - GLMap
-    - "GLMap+DefaultStyle"
-    - "GLMap+DynamicLib"
-    - "GLMap+WorldMap"
-    - GoogleMaps
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - leveldb-library
@@ -112,11 +93,6 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
-  GLMap: 787ed186cc7272ec37433e7554f2a1287ec7f039
-  "GLMap+DefaultStyle": 9ef0a9e75ac251dca2b2c1b34d847a7e90d9deb4
-  "GLMap+DynamicLib": 35af24724d59e30f08e262a577b0f01aff4a0dbe
-  "GLMap+WorldMap": 1114e69ca800a1ca6f911599331462ef29419c86
-  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
@@ -125,6 +101,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: c483fb5784db2573bd3476d42467e51af74b3c0e
+PODFILE CHECKSUM: 039f05c6b831f7748ebf2672b8e5cfba5a0647ee
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
