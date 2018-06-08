@@ -61,16 +61,23 @@ class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITable
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     @IBAction func backClicked(_ sender: Any) {
-        print(totalPrice)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func submitOrder(_ sender: Any) {
-        let alert = UIAlertController(title: "Order confrimed", message: "Your order has been confirmed", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-        self.present(alert, animated: true)
+        let alert = UIAlertController(title: "Order submitted", message: "Your order has been submitted", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {
+            action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true) {
+            self.appDelegate.Order.removeAll()
+        }
     }
     
     func getTotalPrice() -> String {

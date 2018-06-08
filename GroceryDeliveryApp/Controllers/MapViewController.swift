@@ -93,5 +93,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func setAddress(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }

@@ -95,5 +95,10 @@ class RegisterViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    @IBAction func alreadyAnUser(_ sender: Any) {
+        performSegue(withIdentifier: "registerToLogin", sender: nil)
+    }
+    
 
 }

@@ -23,6 +23,9 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
 
+        if !appDelegate.isLogin {
+            performSegue(withIdentifier: "AccountToRegister", sender: nil)
+        }
         // Do any additional setup after loading the view.
         fetchUser()
         profileImageView.layer.cornerRadius = profileImageView.frame.width/2

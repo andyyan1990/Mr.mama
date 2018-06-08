@@ -81,6 +81,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func continueBtnClicked(_ sender: Any) {
         if appDelegate.Order.count > 0 {
             performSegue(withIdentifier: "confirmOrderSegue", sender: nil)
+        }else{
+            let alert = UIAlertController(title: "Empty Cart", message: "Nothing in Cart. Please go back to Shop to pick up something", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
