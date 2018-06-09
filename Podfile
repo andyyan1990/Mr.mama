@@ -20,14 +20,29 @@ pod 'SDWebImage', '~> 4.0'
   target 'GroceryDeliveryAppTests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'Alamofire'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SVProgressHUD'
+pod 'SwiftyJSON'
+pod 'Alamofire'
+pod 'SDWebImage', '~> 4.0'
+	
   end
 
   target 'GroceryDeliveryAppUITests' do
     inherit! :search_paths
     # Pods for testing
-	use_frameworks!
-	pod 'Alamofire'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SVProgressHUD'
+pod 'SwiftyJSON'
+pod 'Alamofire'
+pod 'SDWebImage', '~> 4.0'
+	
   end
 
 end
