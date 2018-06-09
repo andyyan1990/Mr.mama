@@ -10,34 +10,48 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate, SetAddressDelegate {
-
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate, SetAddressDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchAddressView: UIView!
-    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapBtn: UIButton!
     @IBOutlet weak var centerUserLocationBtn: UIButton!
+    @IBOutlet weak var searchResultTableView: UITableView!
     
     let locationManager = CLLocationManager()
+    var searchCompleter = MKLocalSearchCompleter()
+    var searchResults = [MKLocalSearchCompletion]()
+    var selectedOrSetAddress : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
-        searchAddressView.layer.cornerRadius = 10
+        searchAddressView.layer.cornerRadius = 5
         searchAddressView.layer.shadowOpacity = 0.3
         searchAddressView.layer.shadowRadius = 5
         searchAddressView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        mapBtn.layer.cornerRadius = 8
+        mapBtn.layer.cornerRadius = 5
         mapBtn.layer.shadowOpacity = 0.3
         mapBtn.layer.shadowRadius = 5
         mapBtn.layer.shadowOffset = CGSize(width: 0, height: 3)
         centerUserLocationBtn.layer.shadowOpacity = 0.3
         centerUserLocationBtn.layer.shadowRadius = 3
+        searchBar.layer.cornerRadius = 5
         
         //setup location and map
         setUpLocationAndMapView()
+        searchCompleter.delegate = self
+        searchResultTableView.isHidden = true
+        convertCurrentLocationToPlaceName()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        if searchResults.count == 0 {
+            searchResultTableView.isHidden = true
+        }
     }
     
     func setUpLocationAndMapView() {
@@ -60,23 +74,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         centerMapOnUserLocation(regionRadiousLevel: 2.0)
     }
     
-    @IBAction func searchLocation(_ sender: Any) {
-        let searchRequest = MKLocalSearchRequest()
-        searchRequest.naturalLanguageQuery = addressField.text
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        activeSearch.start { (response, error) in
-            if error == nil {
-                let annotations = self.mapView.annotations
-                self.mapView.removeAnnotations(annotations)
-                
-                let latitude = response?.boundingRegion.center.latitude
-                let longitude = response?.boundingRegion.center.longitude
-                
-                let annotation = MKPointAnnotation()
-                
-            }
+    //connect search bar input text with searchCompleter query
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchCompleter.queryFragment = searchText
+        searchResultTableView.reloadData()
+        if !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            searchResultTableView.isHidden = false
+        }
+        if (searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)! {
+            searchResultTableView.isHidden = true
         }
     }
+
+    
+    //pass searched result list to searchResults
+    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
+        searchResults = completer.results
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,5 +118,34 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         return "test"
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let searchResult = searchResults[indexPath.row]
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "searchResultCell")
+        cell.textLabel?.text = searchResult.title
+        cell.detailTextLabel?.text = searchResult.subtitle
+        return cell
+    }
+    
+    //select specific row to set the address
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func convertCurrentLocationToPlaceName() {
+        if let currentLocation = locationManager.location {
+            let geoCoder = CLGeocoder()
+            geoCoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) in
+                if error == nil {
+                    self.selectedOrSetAddress = placemarks![0].name! + "," + placemarks![0].locality! + "," + placemarks![0].postalCode! + "," + placemarks![0].subLocality! + " " + placemarks![0].country!
+                    print(self.selectedOrSetAddress)
+                }
+            }
+        }
+    }
 
 }
