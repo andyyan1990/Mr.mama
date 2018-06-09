@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate, SetAddressDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchAddressView: UIView!
@@ -96,6 +96,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func setAddress(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        getAddress()
+    }
+    
+    func getAddress() -> String {
+        return "test"
     }
     
 

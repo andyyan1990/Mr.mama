@@ -44,12 +44,12 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
                 if error == nil {
                     print(user!)
-                    user?.sendEmailVerification(completion: { (error) in
+                    user?.user.sendEmailVerification(completion: { (error) in
                         print(error ?? "default error")
                     })
                     
                     //persist user information into database
-                    let dbRf = Database.database().reference(fromURL: "https://mr-mama-5bdee.firebaseio.com").child("User").child((user?.uid)!)
+                    let dbRf = Database.database().reference(fromURL: "https://mr-mama-5bdee.firebaseio.com").child("User").child((user?.user.uid)!)
     
                     let values = ["email" : self.emailField.text!, "name" : "default user"] as [String : Any]
                     dbRf.updateChildValues(values, withCompletionBlock: { (error, dbRf) in

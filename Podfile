@@ -20,11 +20,14 @@ pod 'SDWebImage', '~> 4.0'
   target 'GroceryDeliveryAppTests' do
     inherit! :search_paths
     # Pods for testing
+	pod 'Alamofire'
   end
 
   target 'GroceryDeliveryAppUITests' do
     inherit! :search_paths
     # Pods for testing
+	use_frameworks!
+	pod 'Alamofire'
   end
 
 end
