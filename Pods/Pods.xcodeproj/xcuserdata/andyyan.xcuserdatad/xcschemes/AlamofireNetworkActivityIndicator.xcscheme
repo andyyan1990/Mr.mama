@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B646AD13583B8A43551C394A1267DA2"
-               BlueprintName = "SVProgressHUD"
+               BlueprintIdentifier = "115FA0D867E07C04838493890DBD8D29"
+               BlueprintName = "AlamofireNetworkActivityIndicator"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SVProgressHUD.framework">
+               BuildableName = "AlamofireNetworkActivityIndicator.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

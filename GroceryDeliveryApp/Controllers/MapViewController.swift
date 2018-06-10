@@ -61,35 +61,37 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
-        centerMapOnUserLocation(regionRadiousLevel: 2.0)
+        centerLocation(coordinate: mapView.userLocation.coordinate,regionRadiousLevel: 2.0)
     }
     
-    func centerMapOnUserLocation(regionRadiousLevel : Double) {
+    func centerLocation(coordinate: CLLocationCoordinate2D,regionRadiousLevel : Double) {
         let regionRadious:CLLocationDistance = 1000
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, regionRadious * regionRadiousLevel, regionRadious * regionRadiousLevel)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate, regionRadious * regionRadiousLevel, regionRadious * regionRadiousLevel)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 
     @IBAction func centerUserLocation(_ sender: Any) {
-        centerMapOnUserLocation(regionRadiousLevel: 2.0)
+        centerLocation(coordinate: mapView.userLocation.coordinate, regionRadiousLevel: 2.0)
     }
     
     //connect search bar input text with searchCompleter query
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchCompleter.queryFragment = searchText
-        searchResultTableView.reloadData()
         if !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             searchResultTableView.isHidden = false
         }
         if (searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)! {
             searchResultTableView.isHidden = true
         }
+        searchResultTableView.reloadData()
     }
 
     
     //pass searched result list to searchResults
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         searchResults = completer.results
+        print("results searched: \(searchResults.count)")
+        searchResultTableView.reloadData()
     }
     
     
@@ -115,7 +117,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func getAddress() -> String {
-        return "test"
+        return self.selectedOrSetAddress!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -134,6 +136,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     //select specific row to set the address
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        tableView.isHidden = true
+        
+        print(searchResults.count, searchResults[indexPath.row])
+        let completion = searchResults[indexPath.row]
+        let searchRequest = MKLocalSearchRequest(completion: completion)
+        let search = MKLocalSearch(request: searchRequest)
+        search.start { (response, error) in
+            if error == nil {
+                let coordinate = response?.mapItems[0].placemark.coordinate
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate!
+                annotation.title = completion.title
+                annotation.subtitle = completion.subtitle
+                self.mapView.addAnnotation(annotation)
+                self.centerLocation(coordinate: coordinate!, regionRadiousLevel: 2.0)
+                self.selectedOrSetAddress = annotation.title! + "," + annotation.subtitle!
+            }
+        }
+        
     }
     
     func convertCurrentLocationToPlaceName() {
@@ -142,7 +163,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             geoCoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) in
                 if error == nil {
                     self.selectedOrSetAddress = placemarks![0].name! + "," + placemarks![0].locality! + "," + placemarks![0].postalCode! + "," + placemarks![0].subLocality! + " " + placemarks![0].country!
-                    print(self.selectedOrSetAddress)
                 }
             }
         }

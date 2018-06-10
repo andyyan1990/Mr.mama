@@ -22,13 +22,10 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
-        if !appDelegate.isLogin {
-            performSegue(withIdentifier: "AccountToRegister", sender: nil)
-        }
+        
         // Do any additional setup after loading the view.
         fetchUser()
-        profileImageView.layer.cornerRadius = profileImageView.frame.width/2
+        profileImageView.layer.cornerRadius = profileImageView.layer.borderWidth/2
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectprofileImageView)) )
         
@@ -113,7 +110,6 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         }
         dismiss(animated: true, completion: nil)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -121,6 +117,19 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        if !appDelegate.isLogin {
+            performSegue(withIdentifier: "AccountToRegister", sender: nil)
+        }
+    }
+    
+    @IBAction func logOutClicked(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            appDelegate.isLogin = false
+            performSegue(withIdentifier: "AccountToRegister", sender: nil)
+        } catch let signOutError as Error {
+            print(signOutError.localizedDescription)
+        }
     }
     
     

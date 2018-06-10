@@ -13,7 +13,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
-pod 'Alamofire'
+pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 pod 'SDWebImage', '~> 4.0'
 
 
@@ -26,7 +26,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
-pod 'Alamofire'
+pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 pod 'SDWebImage', '~> 4.0'
 	
   end
@@ -40,7 +40,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
-pod 'Alamofire'
+pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 pod 'SDWebImage', '~> 4.0'
 	
   end

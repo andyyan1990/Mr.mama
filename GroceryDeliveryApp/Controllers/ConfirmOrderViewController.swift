@@ -20,6 +20,7 @@ class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var deliveryAddrBtn: UIButton!
     @IBOutlet weak var totalPriceLabel: UIBarButtonItem!
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITable
     override func viewWillAppear(_ animated: Bool) {
         totalPriceLabel.title = getTotalPrice()
         if let addr = setAddrDelegate?.getAddress() {
-            deliveryAddrBtn.titleLabel?.text = addr
+            addressLabel.text = addr
         }
     }
 

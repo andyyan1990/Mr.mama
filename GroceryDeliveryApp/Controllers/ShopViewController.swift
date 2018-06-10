@@ -46,6 +46,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         itemTableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomItemCell")
         
         //
+        itemTableView.backgroundView = UIImageView(image: UIImage(named: "select category"))
         fetchCategoryList()
         fetchItemList()
         
@@ -82,8 +83,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 tempItem.itemImage = cell.itemImage.image!
                 tempItem.itemName = cell.itemLabel.text!
                 if let destVC = segue.destination as? ItemViewController {
-                    //destVC.itemImageView.image = cell.itemImage.image
-                    //destVC.itemLabel.text = cell.itemLabel.text
                     destVC.selectedItem = tempItem
                 }
             }
@@ -140,6 +139,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         if tableView == categoryTableView {
+            itemTableView.backgroundView?.isHidden = true
             let cell = tableView.cellForRow(at: indexPath) as! CategoryTableViewCell
             switch cell.categoryLabel.text {
             case "Diary":
@@ -194,7 +194,6 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Database.database().reference().child("Stock").observe(.value) { (snapshot) in
             if let dict = snapshot.value as? [String : Any] {
                 self.itemList = dict
-                print(Array(self.itemList.values))
             }
         }
     }

@@ -377,11 +377,26 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV0-m4-MTC">
+                                                <rect key="frame" x="310" y="8" width="57" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Cct-65-tSg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Logout">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logOutClicked:" destination="lNo-Zx-Opn" eventType="touchUpInside" id="Cut-mT-IhN"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ifj-h8-cdr" firstAttribute="leading" secondItem="VV5-9e-0qb" secondAttribute="trailing" constant="8" symbolic="YES" id="EYi-SS-Yi8"/>
                                             <constraint firstItem="ifj-h8-cdr" firstAttribute="centerY" secondItem="VV5-9e-0qb" secondAttribute="centerY" id="a8w-Up-oA7"/>
+                                            <constraint firstItem="pV0-m4-MTC" firstAttribute="top" secondItem="o4c-o6-f1t" secondAttribute="top" constant="8" id="cAR-St-bD3"/>
+                                            <constraint firstAttribute="trailing" secondItem="pV0-m4-MTC" secondAttribute="trailing" constant="8" id="fyZ-Vk-AiE"/>
                                             <constraint firstAttribute="bottom" secondItem="VV5-9e-0qb" secondAttribute="bottom" constant="5" id="htR-5a-N2Y"/>
                                             <constraint firstItem="VV5-9e-0qb" firstAttribute="leading" secondItem="o4c-o6-f1t" secondAttribute="leading" constant="8" id="iGK-2J-kvy"/>
                                         </constraints>
@@ -642,22 +657,38 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-EE-5Wt">
                                         <rect key="frame" x="0.0" y="372.5" width="375" height="186.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-ZJ-rdt">
-                                                <rect key="frame" x="78.5" y="69" width="217" height="48"/>
-                                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Delivery Address">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="96I-Zi-Asp" kind="presentation" identifier="toMapView" id="xCj-nH-eBg"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6cv-WA-MJx">
+                                                <rect key="frame" x="20" y="59" width="335" height="68.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-ZJ-rdt">
+                                                        <rect key="frame" x="34" y="0.0" width="267" height="48"/>
+                                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="Set Delivery Address">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="96I-Zi-Asp" kind="presentation" identifier="toMapView" id="xCj-nH-eBg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Unset" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-n9-3uq">
+                                                        <rect key="frame" x="34" y="48" width="267" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="KI8-n9-3uq" firstAttribute="width" secondItem="2mB-ZJ-rdt" secondAttribute="width" id="7Ry-5r-LYy"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="2mB-ZJ-rdt" firstAttribute="centerX" secondItem="zOL-EE-5Wt" secondAttribute="centerX" id="DhV-gr-o9h"/>
-                                            <constraint firstItem="2mB-ZJ-rdt" firstAttribute="centerY" secondItem="zOL-EE-5Wt" secondAttribute="centerY" id="zvj-e4-Z6D"/>
+                                            <constraint firstItem="6cv-WA-MJx" firstAttribute="leading" secondItem="zOL-EE-5Wt" secondAttribute="leading" constant="20" id="MKL-AY-Pkh"/>
+                                            <constraint firstAttribute="trailing" secondItem="6cv-WA-MJx" secondAttribute="trailing" constant="20" id="PTz-nq-W6N"/>
+                                            <constraint firstItem="6cv-WA-MJx" firstAttribute="centerX" secondItem="zOL-EE-5Wt" secondAttribute="centerX" id="S8Z-qD-kyU"/>
+                                            <constraint firstItem="6cv-WA-MJx" firstAttribute="centerY" secondItem="zOL-EE-5Wt" secondAttribute="centerY" id="hM0-pL-knq"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-y8-8Bl">
@@ -708,6 +739,7 @@
                         <viewLayoutGuide key="safeArea" id="5fj-eb-5yB"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="KI8-n9-3uq" id="Hqb-F2-xeV"/>
                         <outlet property="deliveryAddrBtn" destination="2mB-ZJ-rdt" id="UsT-dl-6PY"/>
                         <outlet property="totalPriceLabel" destination="vp5-wA-13D" id="ThU-Fa-3Ob"/>
                     </connections>
@@ -1156,7 +1188,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TQR-nu-t7R"/>
-        <segue reference="vcQ-QK-dce"/>
-        <segue reference="Yjb-6U-vjT"/>
+        <segue reference="PJj-Oi-3r1"/>
+        <segue reference="MQL-In-skk"/>
     </inferredMetricsTieBreakers>
 </document>

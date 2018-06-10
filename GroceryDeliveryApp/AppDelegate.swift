@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import AlamofireNetworkActivityIndicator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("no user login")
         }
   
+        NetworkActivityIndicatorManager.shared.isEnabled = true
         return true
     }
 

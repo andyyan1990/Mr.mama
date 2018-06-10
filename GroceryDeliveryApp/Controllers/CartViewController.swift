@@ -67,6 +67,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             return 120
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     /*
     // MARK: - Navigation
 

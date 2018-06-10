@@ -14,8 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -45,7 +48,8 @@ class LoginViewController: UIViewController {
                     self.alertMessage(title: "Login Error", message: error!.localizedDescription)
                     
                 }else{
-                    
+                    self.appDelegate.isLogin = true
+                    self.appDelegate.currentUserUid = (user?.user.uid)!
                     self.performSegue(withIdentifier: "loginToMain", sender: sender)
                     
                 }
