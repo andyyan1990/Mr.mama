@@ -393,7 +393,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="ifj-h8-cdr" firstAttribute="leading" secondItem="VV5-9e-0qb" secondAttribute="trailing" constant="8" symbolic="YES" id="EYi-SS-Yi8"/>
+                                            <constraint firstAttribute="trailing" secondItem="ifj-h8-cdr" secondAttribute="trailing" constant="98" id="1G5-PU-MSr"/>
+                                            <constraint firstItem="ifj-h8-cdr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VV5-9e-0qb" secondAttribute="trailing" constant="8" symbolic="YES" id="EYi-SS-Yi8"/>
+                                            <constraint firstItem="pV0-m4-MTC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o4c-o6-f1t" secondAttribute="leading" constant="20" symbolic="YES" id="UOd-oU-MdN"/>
                                             <constraint firstItem="ifj-h8-cdr" firstAttribute="centerY" secondItem="VV5-9e-0qb" secondAttribute="centerY" id="a8w-Up-oA7"/>
                                             <constraint firstItem="pV0-m4-MTC" firstAttribute="top" secondItem="o4c-o6-f1t" secondAttribute="top" constant="8" id="cAR-St-bD3"/>
                                             <constraint firstAttribute="trailing" secondItem="pV0-m4-MTC" secondAttribute="trailing" constant="8" id="fyZ-Vk-AiE"/>

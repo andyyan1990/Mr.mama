@@ -33,8 +33,18 @@ class GroceryDeliveryAppUITests: XCTestCase {
     
     func testExample() {
         // Use recording to get started writing UI tests.
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Diary"]/*[[".cells.staticTexts[\"Diary\"]",".staticTexts[\"Diary\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.cells.containing(.staticText, identifier:"pure milk 1").buttons["Increment"].tap()
+        
+        let incrementButton = tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"1")/*[[".cells.containing(.staticText, identifier:\"pure milk 1\")",".cells.containing(.staticText, identifier:\"1\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Increment"]
+        incrementButton.tap()
+        app.navigationBars["pure milk 1"].buttons["Back"].tap()
+        incrementButton.tap()
+        
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-                app?.launch()
     }
     
 }
