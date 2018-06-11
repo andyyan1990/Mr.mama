@@ -10,7 +10,7 @@ import XCTest
 @testable import GroceryDeliveryApp
 
 class RegisterViewControllerTest: XCTestCase {
-    
+
     var registerVC:RegisterViewController?
     
     override func setUp() {
@@ -30,7 +30,13 @@ class RegisterViewControllerTest: XCTestCase {
         
         let inputEmail = "abc"
         let inputPasswd = "password"
-        let isValid = registerVC?.isInputValid(inputEmail: inputEmail, inputPasswd: inputEmail)
+        let isValid = registerVC?.isInputValid(inputEmail: inputEmail, inputPasswd: inputPasswd)
         XCTAssertTrue(isValid!)
+    }
+    
+    func testPasswordSame() {
+        let inputPassewd = "password"
+        let confirmPasswd = "password"
+        XCTAssert((registerVC?.isPasswordSame(passwd: inputPassewd, confirmPasswd: confirmPasswd))!)
     }
 }

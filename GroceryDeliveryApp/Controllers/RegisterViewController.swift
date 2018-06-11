@@ -39,32 +39,10 @@ class RegisterViewController: UIViewController {
     }
     */
     
-    @IBAction func registerBtnClicked(_ sender: UIButton) {
+    @IBAction func registerBtnClicked(_ sender: Any) {
         
         if isInputValid(inputEmail: emailField.text!, inputPasswd: passwordField.text!) && isPasswordSame(passwd: passwordField.text!, confirmPasswd: confirmPasswdField.text!){
-            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
-                if error == nil {
-                    print(user!)
-                    user?.user.sendEmailVerification(completion: { (error) in
-                        print(error ?? "default error")
-                    })
-                    
-                    //persist user information into database
-                    let dbRf = Database.database().reference(fromURL: "https://mr-mama-5bdee.firebaseio.com").child("User").child((user?.user.uid)!)
-    
-                    let values = ["email" : self.emailField.text!, "name" : "default user"] as [String : Any]
-                    dbRf.updateChildValues(values, withCompletionBlock: { (error, dbRf) in
-                        if error == nil{
-                            print("user saved")
-                        }else{
-                            print(error!.localizedDescription)
-                        }
-                    })
-                    self.performSegue(withIdentifier: "registerToLogin", sender: sender)
-                }else{
-                    self.alertMessage(title: "Signup Error", message: error!.localizedDescription)
-                }
-            }
+            firebaseSignup(inputEmail: emailField.text!, inputPasswd: passwordField.text!)
         }else{
             alertMessage(title: "Input Error", message: "Plase check your input. Email and password shouldn't be null. Password and confirm Password should be the same")
             //later could be improved to be label warning below the input field
@@ -72,6 +50,32 @@ class RegisterViewController: UIViewController {
         
     }
     
+    
+    func firebaseSignup(inputEmail:String, inputPasswd:String) {
+        Auth.auth().createUser(withEmail: inputEmail, password: inputPasswd) { (user, error) in
+            if error == nil {
+                print(user!)
+                user?.user.sendEmailVerification(completion: { (error) in
+                    print(error ?? "default error")
+                })
+                
+                //persist user information into database
+                let dbRf = Database.database().reference(fromURL: "https://mr-mama-5bdee.firebaseio.com").child("User").child((user?.user.uid)!)
+                
+                let values = ["email" : self.emailField.text!, "name" : "default user"] as [String : Any]
+                dbRf.updateChildValues(values, withCompletionBlock: { (error, dbRf) in
+                    if error == nil{
+                        print("user saved")
+                    }else{
+                        print(error!.localizedDescription)
+                    }
+                })
+                self.performSegue(withIdentifier: "registerToLogin", sender: nil)
+            }else{
+                self.alertMessage(title: "Signup Error", message: error!.localizedDescription)
+            }
+        }
+    }
     
     // MARK: - Validation of Input
     
