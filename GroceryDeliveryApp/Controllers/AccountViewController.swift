@@ -45,7 +45,7 @@ class AccountViewController: UIViewController, UIImagePickerControllerDelegate, 
             Database.database().reference().child("User").child(appDelegate.currentUserUid).observeSingleEvent(of: .value) {
                 (snapshot) in
                 if let dict = snapshot.value as? [String : Any] {
-                    var tempUser = User()
+                    let tempUser = User()
                     tempUser.userEmail = dict["email"] as? String
                     tempUser.userName = dict["name"] as? String
                     tempUser.userProfileImageUrl = dict["profileUrl"] as? String
